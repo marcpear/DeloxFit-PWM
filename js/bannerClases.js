@@ -1,0 +1,14 @@
+const  bannerTemplate = `
+<div class="background">
+            <img src="assets/imgym1.jpg" alt="back bannerC" class="background">
+        </div>
+        
+<nav class="botonB">
+            <ul>
+                <a href="#" class="botonB">CLASES</a>
+            </ul>
+        </nav>
+        
+`;
+
+  document.getElementById('banner-template').innerHTML = bannerTemplate;
