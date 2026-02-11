@@ -16,5 +16,5 @@ const headerTemplate = `
     </header>
 `;
 
-// Inyectamos el código en el HTML
+// Inyectamos el código en el HTML (Para comprobar el estilo)
 document.getElementById('header-template').innerHTML = headerTemplate;

@@ -1,48 +1,97 @@
-/* --- ESTILOS GENERALES DEL HEADER --- */
+/*Soy consiente que se ve feo, hay que cambiar cosas*/
+
 .main-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: black;
     font-family: "Century Gothic", sans-serif;
+    padding: 15px 50px;
+    min-height: 200px;
+    flex-wrap: wrap;
 }
 
-/* --- ESTILO DEL LOGO (La caja azul) --- */
 .logoDF {
-    height: 120px;  /* Cambia este número si lo quieres más grande o pequeño */
-    width: auto;   /* Esto hace que no se deforme (no se vea "espachurrada") */
-    display: block; /* Ayuda a quitar espacios extraños debajo de la imagen */
-    max-width: 100%;  /* Que no sea más ancha que su caja */
-    max-height: 100%; /* Que no sea más alta que su caja */
-    object-fit: contain; /* Para que no se estire ni se deforme */
-    margin-left: 25px;
+    height: 400px;
+    width: auto;
+    object-fit: contain;
 }
 
-/* --- ESTILO DEL MENÚ --- */
+.nav-menu {
+    flex-grow: 1;
+    margin-left: 60px;
+}
+
 .nav-menu ul {
-    display: flex;             /* Pone los botones en fila horizontal */
-    gap: 80px;                 /* Espacio entre cada botón */
-    list-style: none;          /* Quita los puntos de la lista */
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
     padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
-/* --- ESTILO DE LOS BOTONES (Las cajas amarillas) --- */
 .nav-menu a {
-    margin-right: 80px;
-    background-color: #18A2E7; /* Amarillo clarito */
-    color: #333;               /* Color del texto */
-    text-decoration: none;     /* Quita el subrayado */
-    padding: 15px 20px;        /* Relleno: 15px arriba/abajo, 20px lados */
-    border-radius: 12px;       /* Bordes redondeados */
-    font-size: 12px;
+    background-color: #18A2E7;
+    color: #333;
+    text-decoration: none;
+    margin: 30px;
+    padding: 60px 40px;
+    font-size: 40px;
     font-weight: bold;
-    display: block;            /* Para que respete el padding */
+    border-radius: 15px;
+    text-transform: uppercase;
     text-align: center;
-    transition: 0.3s;          /* Animación suave */
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
 }
 
-/* Efecto al pasar el ratón por encima */
 .nav-menu a:hover {
-    background-color: #6BC3EF; /* Amarillo un poco más oscuro */
+    background-color: #6BC3EF;
     cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #18A2E7;
+}
+
+@media (max-width: 1000px) {
+    .main-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .logoDF {
+        height: 120px;
+        margin-right: 0;
+        margin-bottom: 30px;
+        flex-shrink: 0;
+    }
+
+    .nav-menu {
+        width: 100%;
+        overflow-x: visible;
+        white-space: normal;
+        margin-left: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-menu a {
+        display: block;
+        width: 80%;
+        max-width: 400px;
+        font-size: 16px;
+        padding: 15px 0;
+        border-radius: 12px;
+        margin: 0;
+    }
 }
