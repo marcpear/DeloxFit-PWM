@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeloxFit GYM</title>
+    <title>DeloxFit GYM - Test de Templates</title>
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/bannerV1.css">
+
+    <link rel="stylesheet" href="css/faqs.css">
 </head>
 <body>
 
@@ -14,11 +16,34 @@
 <div id="banner-template"></div>
 
 <main>
+    <section id="faq-test-container" style="padding: 20px;">
+        <h2 style="font-family: 'Century Gothic'; margin-bottom: 20px;">Prueba de FAQS: Bajo Nivel</h2>
 
+        <div id="wrapper-faq"></div>
+    </section>
 </main>
 
 <script src="js/header.js"></script>
 <script src="js/bannerClases.js"></script>
+
+<script type="module">
+    import { itemFaqTemplate } from './js/faqs.js';
+
+    const contenedor = document.getElementById('wrapper-faq');
+
+    // Simulamos la creación de 2 piezas para ver si el diseño se repite bien
+    // Reemplazamos los marcadores que pusimos en el archivo .js
+    let ejemplo1 = itemFaqTemplate
+        .replace('__TITULO__', '¿TIENES DUCHAS?')
+        .replace('__CONTENIDO__', 'Sí, disponemos de vestuarios completos con duchas individuales.');
+
+    let ejemplo2 = itemFaqTemplate
+        .replace('__TITULO__', 'HORARIO DE CLASES')
+        .replace('__CONTENIDO__', 'Las clases dirigidas empiezan a las 8:00 AM de lunes a viernes.');
+
+    // Los unimos e inyectamos
+    contenedor.innerHTML = ejemplo1 + ejemplo2;
+</script>
 
 </body>
 </html>

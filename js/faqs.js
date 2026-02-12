@@ -1,0 +1,6 @@
+export const itemFaqTemplate = `
+    <div class="faq-item">
+        <div class="pregunta">__TITULO__</div>
+        <div class="respuesta">__CONTENIDO__</div>
+    </div>
+`;

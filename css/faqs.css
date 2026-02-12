@@ -1,0 +1,27 @@
+/* Estilo para la pieza individual del boceto [cite: 7] */
+.faq-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Los cuadros grises que dibujaste en el mockup */
+.caja-gris {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: "Century Gothic", sans-serif;
+    color: #ec4343;
+    border: none;
+}
+
+.pregunta {
+    width: 60%; /* Más corta, como en tu dibujo */
+    font-weight: bold;
+}
+
+.respuesta {
+    width: 100%;
+    min-height: 60px;
+}
