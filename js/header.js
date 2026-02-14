@@ -1,20 +1,19 @@
 const headerTemplate = `
-    <header class="main-header">
-        <div class="logo-box">
-            <img src="assets/logo.png" alt="Logo DeloxFit" class="logoDF">
-        </div>
+<header class="main-header">
+    <div class="logo-box">
+        <img src="assets/logo.png" alt="Logo DeloxFit" class="logoDF">
+    </div>
 
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#">Conócenos</a></li>
-                <li><a href="#">Instalaciones</a></li>
-                <li><a href="#">Clases</a></li>
-                <li><a href="#">Suscripciones</a></li>
-                <li><a href="#">Inscripción</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#">Conócenos</a></li>
+            <li><a href="#">Instalaciones</a></li>
+            <li><a href="#">Clases</a></li>
+            <li><a href="#">Suscripciones</a></li>
+            <li><a href="#">Inscripción</a></li>
+        </ul>
+    </nav>
+</header>
 `;
 
-// Inyectamos el código en el HTML (Para comprobar el estilo)
 document.getElementById('header-template').innerHTML = headerTemplate;

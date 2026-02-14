@@ -1,61 +1,50 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Esto evita problemas con los tamaños */
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* Evita que salga barra de scroll horizontal si algo se sale */
-}
-
-/* --- ESTILOS GENERALES DEL HEADER --- */
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: black;
+    padding: 10px 20px;
     font-family: "Century Gothic", sans-serif;
 }
 
-/* --- ESTILO DEL LOGO (La caja azul) --- */
 .logoDF {
-    height: 120px;  /* Cambia este número si lo quieres más grande o pequeño */
-    width: auto;   /* Esto hace que no se deforme (no se vea "espachurrada") */
-    display: block; /* Ayuda a quitar espacios extraños debajo de la imagen */
-    max-width: 100%;  /* Que no sea más ancha que su caja */
-    max-height: 100%; /* Que no sea más alta que su caja */
-    object-fit: contain; /* Para que no se estire ni se deforme */
+    height: 80px;
+    width: auto;
+    object-fit: contain;
     margin-left: 25px;
 }
 
-/* --- ESTILO DEL MENÚ --- */
 .nav-menu ul {
-    display: flex;             /* Pone los botones en fila horizontal */
-    gap: 80px;                 /* Espacio entre cada botón */
-    list-style: none;          /* Quita los puntos de la lista */
+    display: flex;
+    gap: 30px;
+    list-style: none;
     padding: 0;
+    margin-right: 40px;
 }
 
-/* --- ESTILO DE LOS BOTONES (Las cajas amarillas) --- */
 .nav-menu a {
-    margin-right: 80px;
-    background-color: #18A2E7; /* Amarillo clarito */
-    color: #333;               /* Color del texto */
-    text-decoration: none;     /* Quita el subrayado */
-    padding: 15px 20px;        /* Relleno: 15px arriba/abajo, 20px lados */
-    border-radius: 12px;       /* Bordes redondeados */
-    font-size: 12px;
+    background-color: #18A2E7;
+    color: black;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 13px;
     font-weight: bold;
-    display: block;            /* Para que respete el padding */
+    display: block;
     text-align: center;
-    transition: 0.3s;          /* Animación suave */
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
-/* Efecto al pasar el ratón por encima */
 .nav-menu a:hover {
-    background-color: #6BC3EF; /* Amarillo un poco más oscuro */
+    background-color: #6BC3EF;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(24, 162, 231, 0.4);
     cursor: pointer;
+}
+
+.nav-menu a.active {
+    background-color: #6BC3EF;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 5px 15px rgba(24, 162, 231, 0.4);
 }
